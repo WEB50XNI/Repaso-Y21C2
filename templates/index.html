@@ -1,0 +1,28 @@
+{% extends 'layout.html' %}
+
+{% block title %} Inicio {% endblock title %}
+
+{% block principal %}
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1>Moooovies</h1>
+        </div>
+    </div>
+</div>
+<div class="row">
+    {% for ruta in funciones %}
+    <div class="col-6">
+        <button class="btn btn-primay" onclick="mostrarHTML('/{{ruta}}')">
+            {{ruta.upper()}}
+        </button>
+
+    </div>
+    {% endfor %}
+</div>
+<div id="contenidoDinamico">
+
+</div>
+
+
+{% endblock principal %}

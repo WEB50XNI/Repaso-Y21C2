@@ -1,0 +1,16 @@
+<div class="row">
+    {% for row in rows  %}
+        <div class="col-4">
+            <div class="card">
+              <img src="{{row.image}}" class="card-img-top" alt="{{row.name}}">
+              <div class="card-body">
+                <h5 class="card-title">{{row.name}}</h5>
+                <h6 class="card-subtitle mb-2 text-muted ">{{row.year}}</h6>
+                <p class="card-text">{{row.description}}
+              </div>
+            </div>
+        </div>
+    
+    {% endfor %}
+
+</div>
